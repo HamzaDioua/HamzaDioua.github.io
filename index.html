@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hamza Dioua – Ingénieur Cloud & DevOps – Stage PFE 2027</title>
+<meta name="description" content="Hamza Dioua, étudiant ingénieur en Génie Informatique à l'ENIAD Berkane, certifié Google Cloud ACE. Cloud, DevOps, Spring Boot et microservices. En recherche d'un stage PFE de 6 mois en 2027.">
+<meta name="theme-color" content="#06100c">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hamza Dioua – Ingénieur Cloud & DevOps">
+<meta property="og:description" content="Du code à la production : Spring Boot, Docker, Terraform, GKE, GitHub Actions. Stage PFE 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Hamza Dioua","jobTitle":"Étudiant ingénieur Cloud & DevOps","email":"mailto:hamzadioua@gmail.com","alumniOf":"ENIAD Berkane","sameAs":["https://github.com/HamzaDioua","https://linkedin.com/in/hamza-dioua"]}</script>
+<style>
+/* ---------- tokens ---------- */
+:root{--bg:#06100c;--bg2:#0a1814;--panel:#0d1c17;--line:#1b3028;--text:#e8f2ed;--muted:#97ada3;--accent:#34d399;--accent2:#10b981;--ink:#03130c;
+--head:'Sora',system-ui,sans-serif;--body:'Manrope',system-ui,sans-serif;--r:14px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font:400 1rem/1.7 var(--body);padding-bottom:env(safe-area-inset-bottom);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:var(--ink);padding:8px 14px;border-radius:8px;z-index:50;font-weight:600}
+.skip:focus{left:8px}
+svg.i{width:1.25em;height:1.25em;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:88px 0 8px}
+h1,h2,h3{font-family:var(--head);line-height:1.15;letter-spacing:-.02em}
+h2{font-size:clamp(1.7rem,3.8vw,2.4rem);margin-bottom:12px;max-width:22ch}
+.sub{color:var(--muted);max-width:60ch;margin-bottom:40px}
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:20;padding-top:env(safe-area-inset-top);background:rgba(6,16,12,.82);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:800 1.25rem var(--head)}.logo b{color:var(--accent)}
+nav ul{display:flex;gap:6px;list-style:none;padding:0;align-items:center}
+nav ul a{display:block;color:var(--muted);font-size:.92rem;padding:8px 12px;border-radius:8px;transition:color .2s,background .2s}
+nav ul a:hover{color:var(--text)}
+nav ul a[aria-current=true]{color:var(--accent);background:rgba(52,211,153,.09)}
+.menu{display:none;background:none;border:1px solid var(--line);border-radius:10px;color:var(--text);width:44px;height:44px;cursor:pointer;place-items:center}
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:10px;font-weight:600;font-size:.95rem;border:1px solid var(--line);background:var(--panel);transition:transform .15s,border-color .2s}
+.btn:hover{transform:translateY(-2px);border-color:var(--accent)}
+.btn.main,nav ul a.btn.main{background:var(--accent);color:var(--ink);border-color:var(--accent)}
+nav ul a.btn{padding:8px 14px;margin-left:8px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+/* ---------- hero ---------- */
+.hero{padding-top:64px;display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;
+background:radial-gradient(520px 320px at 85% 30%,rgba(52,211,153,.12),transparent 70%)}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--bg2);border-radius:99px;padding:6px 14px;font-size:.85rem;color:var(--muted)}
+.badge i{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(52,211,153,.18)}
+.hero h1{font-size:clamp(2.5rem,6.6vw,4.3rem);letter-spacing:-.035em;margin-bottom:12px}
+.role{font:600 1.15rem var(--head);color:var(--accent);margin-bottom:16px}
+.lead{color:var(--muted);max-width:54ch;margin-bottom:28px}
+.lead strong{color:var(--text);font-weight:600}
+.photo{display:block;justify-self:center;width:100%;max-width:360px;aspect-ratio:1/1;object-fit:cover;object-position:50% 20%;border-radius:28px;border:1px solid rgba(52,211,153,.35);box-shadow:0 0 0 10px rgba(52,211,153,.07),0 30px 60px rgba(0,0,0,.45);background:var(--panel)}
+/* du code à la production */
+.flowbar{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);margin-top:56px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(160deg,var(--panel),var(--bg2));overflow:hidden}
+.flowbar li{padding:20px 22px;border-right:1px solid var(--line)}
+.flowbar li:last-child{border-right:0}
+.flowbar em{display:block;font:600 .72rem var(--head);font-style:normal;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.flowbar b{display:block;font:700 1.02rem var(--head)}
+.flowbar span{color:var(--muted);font-size:.85rem;line-height:1.5;display:block;margin-top:2px}
+/* ---------- cards ---------- */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.card h3{font-size:1.1rem;margin-bottom:4px}
+.card p{color:var(--muted)}
+.meta{color:var(--muted);font-size:.88rem;margin-bottom:14px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin-top:16px}
+.pills li{font-size:.82rem;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--text)}
+.pills li.k{background:rgba(52,211,153,.10);border-color:rgba(52,211,153,.4);color:var(--accent);font-weight:600}
+.ticks{list-style:none;padding:0;display:grid;gap:8px;margin-top:14px;color:var(--muted);font-size:.95rem}
+.ticks li{padding-left:22px;position:relative}
+.ticks li::before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;border-radius:2px;background:var(--accent)}
+.ticks b{color:var(--text);font-weight:600}
+/* about */
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+.about p{color:var(--muted);margin-bottom:16px;max-width:62ch}.about strong{color:var(--text);font-weight:600}
+.links{display:grid;gap:12px;align-content:start;padding:0}
+.links li{list-style:none}
+.links.card,.links li.card{padding:18px 22px}
+.links b{display:block;font-family:var(--head);font-size:1rem}.links span{color:var(--muted);font-size:.9rem}
+/* experience */
+.xp{display:grid;grid-template-columns:1.6fr 1fr;gap:20px;align-items:start}
+.xp .big{border-color:rgba(52,211,153,.4);background:linear-gradient(160deg,var(--panel),#0b2019)}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:16px 0 4px;font-size:.85rem}
+.flow span{padding:4px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg)}
+/* projects */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.project{display:flex;flex-direction:column;padding:0;overflow:hidden;transition:border-color .2s,transform .2s}
+.project:hover{border-color:var(--accent);transform:translateY(-3px)}
+.shot{aspect-ratio:16/8;display:grid;place-items:center;border-bottom:1px dashed var(--line);background:repeating-linear-gradient(135deg,var(--bg2) 0 12px,var(--panel) 12px 24px);color:var(--muted);font-size:.82rem;text-align:center;padding:8px}
+.pbody{padding:24px;display:flex;flex-direction:column;flex:1}
+.card .need{color:var(--text);margin:6px 0 4px}
+.plinks{margin-top:auto;padding-top:20px;display:flex;gap:16px;font-size:.9rem;font-weight:600;color:var(--accent)}
+.plinks a{display:inline-flex;align-items:center;gap:6px}.plinks a:hover{text-decoration:underline}
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.skill h3{display:flex;align-items:center;gap:10px;font-size:1rem}
+.skill h3 svg{color:var(--accent)}
+.skill.hl{border-color:rgba(52,211,153,.45)}
+.legend{color:var(--muted);font-size:.9rem;margin-bottom:24px}
+.legend b{color:var(--accent)}
+/* education */
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:28px}
+.cols h3{margin-bottom:18px;font-size:1.05rem}
+.tl{list-style:none;padding:0 0 0 22px;border-left:2px solid var(--line);display:grid;gap:22px}
+.tl li{position:relative;color:var(--muted);font-size:.92rem}
+.tl li::before{content:"";position:absolute;left:-29px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tl b{display:block;color:var(--text);font-weight:600;font-size:1rem}
+.tl a{color:var(--accent);font-weight:600}
+.cert{border-color:rgba(52,211,153,.5);margin-bottom:22px}
+.cert svg{width:34px;height:34px;color:var(--accent);margin-bottom:10px}
+/* contact */
+.contact{text-align:center;padding-bottom:88px}
+.contact h2{margin-inline:auto;max-width:20ch}
+.contact .sub{margin-inline:auto}
+.contact .btns{justify-content:center}
+.contact .box{border:1px solid var(--line);border-radius:24px;padding:56px 24px;background:radial-gradient(500px 240px at 50% 0,rgba(52,211,153,.12),transparent 70%),var(--panel)}
+footer{border-top:1px solid var(--line);padding:24px 0 32px;color:var(--muted);font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+/* ---------- responsive ---------- */
+@media(max-width:860px){
+.menu{display:grid}
+nav ul{position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;align-items:stretch;padding:12px 24px 20px;border-bottom:1px solid var(--line);display:none}
+nav ul.open{display:flex}
+nav ul a.btn{margin:8px 0 0;justify-content:center}
+.hero,.about,.xp{grid-template-columns:1fr}
+.hero{gap:32px}.photo{order:-1;max-width:240px}
+.flowbar{grid-template-columns:repeat(2,1fr)}
+.flowbar li{border-bottom:1px solid var(--line)}.flowbar li:nth-child(2n){border-right:0}.flowbar li:nth-child(n+3){border-bottom:0}
+section{padding-top:64px}}
+@media(max-width:520px){.hero h1{font-size:2.3rem}.flowbar{grid-template-columns:1fr}.flowbar li{border-right:0;border-bottom:1px solid var(--line)!important}.flowbar li:last-child{border-bottom:0!important}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Aller au contenu</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="cloud" viewBox="0 0 24 24"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 9a4.5 4.5 0 0 1 0 9z"/></symbol>
+<symbol id="box" viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></symbol>
+<symbol id="srv" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01"/></symbol>
+<symbol id="db" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+<symbol id="code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
+<symbol id="chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16M8 16v-4M13 16V8M18 16v-6"/></symbol>
+<symbol id="check" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6zM8.5 12l2.5 2.5 4.5-5"/></symbol>
+<symbol id="mob" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></symbol>
+<symbol id="ext" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></symbol>
+<symbol id="dl" viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></symbol>
+<symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+</defs></svg>
+
+<header><div class="wrap"><nav aria-label="Navigation principale">
+  <a class="logo" href="#top" aria-label="Hamza Dioua, accueil"><b>H</b>amza.</a>
+  <button class="menu" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="links"><svg class="i" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <ul id="links">
+    <li><a href="#apropos">À propos</a></li>
+    <li><a href="#experience">Expérience</a></li>
+    <li><a href="#projets">Projets</a></li>
+    <li><a href="#competences">Compétences</a></li>
+    <li><a href="#parcours">Parcours</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a class="btn main" href="CV_HAMZA_DIOUA_DevOps_Cloud.pdf" target="_blank" rel="noopener"><svg class="i"><use href="#dl"/></svg>CV</a></li>
+  </ul>
+</nav></div></header>
+
+<main id="main" class="wrap">
+<div class="hero">
+  <div>
+    <div class="badges">
+      <span class="badge"><i></i>Stage PFE de 6 mois · 2027</span>
+      <span class="badge">Google Cloud ACE · oct. 2026</span>
+    </div>
+    <h1>Hamza Dioua</h1>
+    <p class="role">Ingénieur Cloud &amp; DevOps en formation</p>
+    <p class="lead">Étudiant en dernière année de Génie Informatique à l'ENIAD Berkane. Je développe des backends <strong>Spring Boot</strong>, les conteneurise avec <strong>Docker</strong>, automatise leur déploiement avec <strong>GitHub Actions</strong> et provisionne l'infrastructure sur <strong>Google Cloud</strong> avec <strong>Terraform</strong>.</p>
+    <div class="btns">
+      <a class="btn main" href="#projets">Voir mes projets</a>
+      <a class="btn" href="CV_HAMZA_DIOUA_DevOps_Cloud.pdf" download><svg class="i"><use href="#dl"/></svg>Télécharger mon CV</a>
+      <a class="btn" href="#contact">Me contacter</a>
+    </div>
+  </div>
+  <img class="photo" src="photo.jpeg" alt="Portrait de Hamza Dioua" width="360" height="360">
+</div>
+<ol class="flowbar" aria-label="Du code à la production">
+  <li><em>1 · Code</em><b>Développer</b><span>Spring Boot, Angular, Flutter</span></li>
+  <li><em>2 · Conteneur</em><b>Conteneuriser</b><span>Docker, Artifact Registry</span></li>
+  <li><em>3 · Pipeline</em><b>Automatiser</b><span>GitHub Actions : build, tests, déploiement</span></li>
+  <li><em>4 · Production</em><b>Déployer</b><span>GKE sur GCP, infrastructure avec Terraform</span></li>
+</ol>
+
+<section id="apropos" aria-labelledby="t-apropos">
+  <div class="about">
+    <div>
+      <h2 id="t-apropos">Du code jusqu'à la production</h2>
+      <p>Ce qui m'intéresse, c'est aussi ce qui se passe après le commit. Mon stage chez PREVAIA, une migration vers les <strong>microservices</strong>, m'a donné les bases de la conteneurisation et du CI/CD. Mes projets personnels sur <strong>Google Cloud</strong> (GKE, IAM, Compute Engine, Terraform) m'ont permis d'aller plus loin côté infrastructure.</p>
+      <p>Cette double compétence, développement et exploitation, me permet de comprendre une application de bout en bout. J'utilise aussi l'IA dans mon workflow, avec du développement piloté par les spécifications (OpenSpec).</p>
+      <p>Je recherche un <strong>stage PFE de six mois</strong> en Cloud Computing, DevOps, Infrastructure ou Software Engineering, avec un intérêt pour les systèmes distribués et la data.</p>
+    </div>
+    <ul class="links" aria-label="Ce que je sais faire">
+      <li class="card"><b>Développer</b><span>Backend Java / Spring Boot, API REST, gRPC</span></li>
+      <li class="card"><b>Conteneuriser et automatiser</b><span>Docker, GitHub Actions, Git</span></li>
+      <li class="card"><b>Provisionner et déployer</b><span>GCP, GKE, Terraform</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="experience" aria-labelledby="t-xp">
+  <h2 id="t-xp">Expérience</h2>
+  <p class="sub">Un stage d'ingénierie sur une migration d'architecture, et une première immersion en administration publique.</p>
+  <div class="xp">
+    <article class="card big">
+      <h3>Stagiaire – Migration d'un monolithe vers des microservices</h3>
+      <p class="meta">PREVAIA · juin – septembre 2026</p>
+      <p>Migration d'un monolithe vers 6 microservices, conteneurisés et livrés par un pipeline automatisé.</p>
+      <div class="flow" role="list" aria-label="Les 6 microservices"><span role="listitem">IAM</span><span role="listitem">Assessment</span><span role="listitem">Catalog</span><span role="listitem">Partner</span><span role="listitem">Integration</span><span role="listitem">Notification</span></div>
+      <ul class="ticks">
+        <li>Services exposés via <b>Spring Cloud Gateway</b>.</li>
+        <li>Communication synchrone (<b>REST / gRPC</b>) et asynchrone (broker de messages).</li>
+        <li>Conteneurisation <b>Docker</b> de tous les services.</li>
+        <li>Pipeline <b>CI/CD GitHub Actions</b> : build, tests et déploiement.</li>
+        <li>Travail en binôme avec ma tutrice, bonnes pratiques Git, environnements reproductibles.</li>
+      </ul>
+      <ul class="pills"><li class="k">Spring Boot</li><li class="k">Docker</li><li class="k">GitHub Actions</li><li>Spring Cloud Gateway</li><li>REST / gRPC</li></ul>
+    </article>
+    <article class="card">
+      <h3>Stagiaire Observation IT</h3>
+      <p class="meta">Province de Kénitra · 2024</p>
+      <p>Découverte des métiers IT dans une administration publique : accompagnement des équipes techniques et sensibilisation aux enjeux de digitalisation des services.</p>
+    </article>
+  </div>
+</section>
+
+<section id="projets" aria-labelledby="t-proj">
+  <h2 id="t-proj">Projets</h2>
+  <p class="sub">Trois projets, de l'application à son déploiement.</p>
+  <div class="grid">
+    <article class="card project">
+      <div class="shot" role="img" aria-label="Emplacement réservé pour une capture d'écran">Capture ou schéma d'architecture à ajouter</div>
+      <div class="pbody">
+        <h3>MediSmart Cloud Deploy</h3>
+        <p class="need">Rendre le déploiement de MediSmart reproductible sur Google Cloud.</p>
+        <ul class="ticks">
+          <li>Infrastructure décrite avec Terraform : VPC, cluster GKE, Artifact Registry.</li>
+          <li>Pipeline GitHub Actions qui build, pousse l'image et déploie en continu sur GKE.</li>
+        </ul>
+        <ul class="pills"><li class="k">GCP</li><li class="k">GKE</li><li class="k">Terraform</li><li class="k">Docker</li><li class="k">GitHub Actions</li></ul>
+      </div>
+    </article>
+    <article class="card project">
+      <div class="shot" role="img" aria-label="Emplacement réservé pour une capture d'écran">Capture d'écran à ajouter</div>
+      <div class="pbody">
+        <h3>MediSmart – Télémédecine (PFA)</h3>
+        <p class="need">Plateforme de télémédecine web et mobile, projet de fin d'année.</p>
+        <ul class="ticks">
+          <li>Application full stack avec authentification JWT.</li>
+          <li>API REST documentée avec Swagger, migrations de base avec Liquibase.</li>
+        </ul>
+        <ul class="pills"><li class="k">Spring Boot 4</li><li>Angular 19</li><li>PostgreSQL</li><li>JWT</li></ul>
+        <div class="plinks"><a href="https://github.com/HamzaDioua/MediSmart" target="_blank" rel="noopener">GitHub <svg class="i"><use href="#ext"/></svg></a></div>
+      </div>
+    </article>
+    <article class="card project">
+      <div class="shot" role="img" aria-label="Emplacement réservé pour une capture d'écran">Capture d'écran à ajouter</div>
+      <div class="pbody">
+        <h3>Gestion de Stock</h3>
+        <p class="need">Gérer un inventaire sans connexion réseau.</p>
+        <ul class="ticks">
+          <li>Application mobile Flutter 100 % hors ligne.</li>
+          <li>CRUD complet, scan de QR Code, stockage SQLite.</li>
+        </ul>
+        <ul class="pills"><li>Flutter</li><li>Dart</li><li>SQLite</li></ul>
+        <div class="plinks"><a href="https://github.com/HamzaDioua/InventoryManager" target="_blank" rel="noopener">GitHub <svg class="i"><use href="#ext"/></svg></a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="competences" aria-labelledby="t-comp">
+  <h2 id="t-comp">Compétences</h2>
+  <p class="legend">Les technologies en <b>vert</b> sont celles de mon positionnement Cloud &amp; DevOps.</p>
+  <div class="skills">
+    <div class="card skill hl"><h3><svg class="i"><use href="#cloud"/></svg>Cloud &amp; Infrastructure</h3><ul class="pills"><li class="k">GCP</li><li class="k">GKE</li><li class="k">Compute Engine</li><li class="k">IAM</li><li>VPC</li><li>BigQuery</li><li>Cloud Monitoring</li></ul></div>
+    <div class="card skill hl"><h3><svg class="i"><use href="#box"/></svg>DevOps &amp; CI/CD</h3><ul class="pills"><li class="k">Docker</li><li class="k">Kubernetes</li><li class="k">Terraform</li><li class="k">GitHub Actions</li><li>Docker Compose</li><li>Git</li><li>Linux</li><li>Bash</li></ul></div>
+    <div class="card skill"><h3><svg class="i"><use href="#srv"/></svg>Backend &amp; Microservices</h3><ul class="pills"><li class="k">Java</li><li class="k">Spring Boot</li><li>Microservices</li><li>API REST</li><li>gRPC</li><li>JEE</li><li>JPA / Hibernate</li><li>Node.js</li><li>Maven</li></ul></div>
+    <div class="card skill"><h3><svg class="i"><use href="#chart"/></svg>Data &amp; IA</h3><ul class="pills"><li>Python</li><li>Pandas</li><li>NumPy</li><li>Scikit-learn</li><li>Machine Learning</li><li>Deep Learning</li><li>Big Data</li></ul></div>
+    <div class="card skill"><h3><svg class="i"><use href="#mob"/></svg>Frontend &amp; Mobile</h3><ul class="pills"><li>Angular</li><li>TypeScript</li><li>Flutter</li><li>Dart</li></ul></div>
+    <div class="card skill"><h3><svg class="i"><use href="#db"/></svg>Bases de données</h3><ul class="pills"><li>PostgreSQL</li><li>MySQL</li><li>Oracle</li><li>SQLite</li></ul></div>
+    <div class="card skill"><h3><svg class="i"><use href="#check"/></svg>Tests &amp; qualité</h3><ul class="pills"><li>JUnit</li><li>Mockito</li><li>Postman</li><li>Swagger</li></ul></div>
+    <div class="card skill"><h3><svg class="i"><use href="#code"/></svg>Méthodes &amp; socle ENIAD</h3><ul class="pills"><li>OpenSpec</li><li>Spec-driven development</li><li>Gestion agile</li><li>UML</li><li>Design patterns</li><li>Administration systèmes</li><li>Réseaux &amp; sécurité</li><li>C++</li><li>.NET</li></ul></div>
+  </div>
+</section>
+
+<section id="parcours" aria-labelledby="t-parc">
+  <h2 id="t-parc">Formation &amp; certifications</h2>
+  <p class="sub">Un cycle ingénieur avec des modules DevOps, Cloud et systèmes distribués.</p>
+  <div class="cols">
+    <div><h3>Formation</h3><ul class="tl">
+      <li><b>Cycle ingénieur – Génie Informatique</b>ENIAD Berkane · 2024 – 2027<br>Dernière année, PFE 2027. Modules : Ingénierie DevOps, Cloud Computing et Virtualisation, JEE et applications distribuées, Architecture logicielle, Ingénierie Big Data, Machine Learning, Deep Learning.<br><a href="https://eniad.ump.ma/fr/cycle-ingenieur-genie-informatique-ginf" target="_blank" rel="noopener">Voir la filière</a></li>
+      <li><b>DEUG Sciences Mathématiques &amp; Informatique</b>Université Ibn Tofail, Kénitra · 2022 – 2024</li>
+      <li><b>Baccalauréat Sciences Mathématiques B</b>2022</li></ul></div>
+    <div><h3>Certifications</h3>
+      <div class="card cert"><svg class="i"><use href="#check"/></svg><h3>Google Cloud Associate Cloud Engineer</h3><p class="meta" style="margin:0">Google Cloud · octobre 2026</p></div>
+      <ul class="tl">
+        <li><b>Supervised Machine Learning</b>Coursera, Andrew Ng · 2024</li>
+        <li><b>Advanced Learning Algorithms</b>Coursera, Andrew Ng · 2024</li></ul></div>
+    <div><h3>Langues &amp; engagement</h3><ul class="tl">
+      <li><b>Arabe</b>Courant (natif)</li><li><b>Français</b>B2 · professionnel</li><li><b>Anglais</b>B2 · technique</li>
+      <li><b>Président du CS Club &amp; Enactus UIT</b>Université Ibn Tofail · 2024 – 2025</li>
+      <li><b>Bénévole</b>Programme national Motatawi3, édition 3 · 2025</li></ul></div>
+  </div>
+</section>
+
+<section id="contact" class="contact" aria-labelledby="t-contact">
+  <div class="box">
+    <h2 id="t-contact">Un stage PFE en Software Engineering, Cloud ou DevOps à pourvoir ?</h2>
+    <p class="sub">Je cherche une équipe pour un stage de six mois en 2027, en développement logiciel ou en Cloud et DevOps. Écrivez-moi, je réponds rapidement.</p>
+    <div class="btns">
+      <a class="btn main" href="mailto:hamzadioua@gmail.com"><svg class="i"><use href="#mail"/></svg>hamzadioua@gmail.com</a>
+      <a class="btn" href="CV_HAMZA_DIOUA_DevOps_Cloud.pdf" target="_blank" rel="noopener"><svg class="i"><use href="#dl"/></svg>Consulter mon CV</a>
+      <a class="btn" href="https://linkedin.com/in/hamza-dioua" target="_blank" rel="noopener">LinkedIn <svg class="i"><use href="#ext"/></svg></a>
+      <a class="btn" href="https://github.com/HamzaDioua" target="_blank" rel="noopener">GitHub <svg class="i"><use href="#ext"/></svg></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Hamza Dioua · Kénitra, Maroc</span><a href="#top">Retour en haut</a></div></footer>
+
+<script>
+const btn=document.querySelector('.menu'),ul=document.getElementById('links');
+const close=()=>{ul.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Ouvrir le menu')};
+btn.addEventListener('click',()=>{const o=ul.classList.toggle('open');btn.setAttribute('aria-expanded',o);btn.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu')});
+ul.addEventListener('click',e=>{if(e.target.closest('a'))close()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&ul.classList.contains('open')){close();btn.focus()}});
+// section active dans la navigation
+const links=[...ul.querySelectorAll('a[href^="#"]')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.removeAttribute('aria-current'));
+    const a=links[secs.indexOf(e.target)];if(a)a.setAttribute('aria-current','true')}}),{rootMargin:'-40% 0px -55% 0px'});
+  secs.forEach(s=>s&&io.observe(s));
+}
+</script>
+</body>
+</html>
