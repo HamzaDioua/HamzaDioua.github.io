@@ -92,6 +92,8 @@ background:radial-gradient(520px 320px at 85% 30%,rgba(52,211,153,.12),transpare
 .project{display:flex;flex-direction:column;padding:0;overflow:hidden;transition:border-color .2s,transform .2s}
 .project:hover{border-color:var(--accent);transform:translateY(-3px)}
 .shot{aspect-ratio:16/8;display:grid;place-items:center;border-bottom:1px dashed var(--line);background:repeating-linear-gradient(135deg,var(--bg2) 0 12px,var(--panel) 12px 24px);color:var(--muted);font-size:.82rem;text-align:center;padding:8px}
+.shot.has-img{padding:0;background:var(--bg);color:inherit}
+.shot.has-img img{display:block;width:100%;height:100%;object-fit:cover}
 .pbody{padding:24px;display:flex;flex-direction:column;flex:1}
 .card .need{color:var(--text);margin:6px 0 4px}
 .plinks{margin-top:auto;padding-top:20px;display:flex;gap:16px;font-size:.9rem;font-weight:600;color:var(--accent)}
@@ -113,6 +115,14 @@ background:radial-gradient(520px 320px at 85% 30%,rgba(52,211,153,.12),transpare
 .tl a{color:var(--accent);font-weight:600}
 .cert{border-color:rgba(52,211,153,.5);margin-bottom:22px}
 .cert svg{width:34px;height:34px;color:var(--accent);margin-bottom:10px}
+a.cert{display:block;transition:border-color .2s,transform .2s}
+a.cert:hover{border-color:var(--accent);transform:translateY(-3px)}
+.verify{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:.9rem;font-weight:600;color:var(--accent)}
+.verify svg{width:1em;height:1em;margin:0}
+a.cert:hover .verify{text-decoration:underline}
+a.badge{transition:border-color .2s,color .2s}
+a.badge:hover{border-color:var(--accent);color:var(--text)}
+a.badge svg{width:1em;height:1em}
 /* contact */
 .contact{text-align:center;padding-bottom:88px}
 .contact h2{margin-inline:auto;max-width:20ch}
@@ -171,7 +181,7 @@ section{padding-top:64px}}
   <div>
     <div class="badges">
       <span class="badge"><i></i>Stage PFE de 6 mois · 2027</span>
-      <span class="badge">Google Cloud ACE · oct. 2026</span>
+      <a class="badge" href="https://www.credly.com/badges/ac61dacf-7f76-4df4-9e3e-e30c60995a24/linked_in_profile" target="_blank" rel="noopener" aria-label="Voir mon badge Google Cloud ACE (nouvel onglet)">Google Cloud ACE · oct. 2026 <svg class="i"><use href="#ext"/></svg></a>
     </div>
     <h1>Hamza Dioua</h1>
     <p class="role">Ingénieur Cloud &amp; DevOps en formation</p>
@@ -238,7 +248,7 @@ section{padding-top:64px}}
   <p class="sub">Trois projets, de l'application à son déploiement.</p>
   <div class="grid">
     <article class="card project">
-      <div class="shot" role="img" aria-label="Emplacement réservé pour une capture d'écran">Capture ou schéma d'architecture à ajouter</div>
+      <a class="shot has-img" href="assets/medismart-architecture.png" target="_blank" rel="noopener" aria-label="Agrandir le schéma d'architecture"><img src="assets/medismart-architecture.png" width="1600" height="800" loading="lazy" alt="Schéma d'architecture : GitHub Actions pousse l'image dans Artifact Registry, le déploiement cible un cluster GKE avec Nginx, Spring Boot, Cloud SQL et Cloud Storage sur Google Cloud"></a>
       <div class="pbody">
         <h3>MediSmart Cloud Deploy</h3>
         <p class="need">Rendre le déploiement de MediSmart reproductible sur Google Cloud.</p>
@@ -247,10 +257,11 @@ section{padding-top:64px}}
           <li>Pipeline GitHub Actions qui build, pousse l'image et déploie en continu sur GKE.</li>
         </ul>
         <ul class="pills"><li class="k">GCP</li><li class="k">GKE</li><li class="k">Terraform</li><li class="k">Docker</li><li class="k">GitHub Actions</li></ul>
+        <div class="plinks"><a href="https://github.com/HamzaDioua/medismart-cloud-deploy" target="_blank" rel="noopener">GitHub <svg class="i"><use href="#ext"/></svg></a></div>
       </div>
     </article>
     <article class="card project">
-      <div class="shot" role="img" aria-label="Emplacement réservé pour une capture d'écran">Capture d'écran à ajouter</div>
+      <a class="shot has-img" href="assets/medismart-dashboard-patient.png" target="_blank" rel="noopener" aria-label="Agrandir la capture du tableau de bord patient"><img src="assets/medismart-dashboard-patient-thumb.png" width="1600" height="800" loading="lazy" alt="Capture du tableau de bord patient MediSmart : prochains rendez-vous, ordonnances actives, messages récents, notifications et derniers documents"></a>
       <div class="pbody">
         <h3>MediSmart – Télémédecine (PFA)</h3>
         <p class="need">Plateforme de télémédecine web et mobile, projet de fin d'année.</p>
@@ -263,7 +274,7 @@ section{padding-top:64px}}
       </div>
     </article>
     <article class="card project">
-      <div class="shot" role="img" aria-label="Emplacement réservé pour une capture d'écran">Capture d'écran à ajouter</div>
+      <a class="shot has-img" href="assets/inventory-manager.png" target="_blank" rel="noopener" aria-label="Agrandir les captures de l'application Inventory Manager"><img src="assets/inventory-manager-thumb.png" width="1600" height="800" loading="lazy" alt="Captures de l'application mobile Inventory Manager : tableau de bord, liste des produits avec alertes de stock faible et statistiques"></a>
       <div class="pbody">
         <h3>Gestion de Stock</h3>
         <p class="need">Gérer un inventaire sans connexion réseau.</p>
@@ -302,10 +313,10 @@ section{padding-top:64px}}
       <li><b>DEUG Sciences Mathématiques &amp; Informatique</b>Université Ibn Tofail, Kénitra · 2022 – 2024</li>
       <li><b>Baccalauréat Sciences Mathématiques B</b>2022</li></ul></div>
     <div><h3>Certifications</h3>
-      <div class="card cert"><svg class="i"><use href="#check"/></svg><h3>Google Cloud Associate Cloud Engineer</h3><p class="meta" style="margin:0">Google Cloud · octobre 2026</p></div>
+      <a class="card cert" href="https://www.credly.com/badges/ac61dacf-7f76-4df4-9e3e-e30c60995a24/linked_in_profile" target="_blank" rel="noopener" aria-label="Voir mon badge Google Cloud Associate Cloud Engineer (nouvel onglet)"><svg class="i"><use href="#check"/></svg><h3>Google Cloud Associate Cloud Engineer</h3><p class="meta" style="margin:0">Google Cloud · octobre 2026</p><span class="verify">Vérifier le badge <svg class="i"><use href="#ext"/></svg></span></a>
       <ul class="tl">
-        <li><b>Supervised Machine Learning</b>Coursera, Andrew Ng · 2024</li>
-        <li><b>Advanced Learning Algorithms</b>Coursera, Andrew Ng · 2024</li></ul></div>
+        <li><b>Supervised Machine Learning</b>Coursera, Andrew Ng · 2024<br><a href="https://coursera.org/verify/BU34L9FSZ3MT" target="_blank" rel="noopener">Vérifier le certificat</a></li>
+        <li><b>Advanced Learning Algorithms</b>Coursera, Andrew Ng · 2024<br><a href="https://coursera.org/verify/3XV8B30COLP6" target="_blank" rel="noopener">Vérifier le certificat</a></li></ul></div>
     <div><h3>Langues &amp; engagement</h3><ul class="tl">
       <li><b>Arabe</b>Courant (natif)</li><li><b>Français</b>B2 · professionnel</li><li><b>Anglais</b>B2 · technique</li>
       <li><b>Président du CS Club &amp; Enactus UIT</b>Université Ibn Tofail · 2024 – 2025</li>
